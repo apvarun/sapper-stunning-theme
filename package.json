@@ -17,6 +17,7 @@
     "front-matter": "^3.1.0",
     "marked": "^0.8.0",
     "polka": "next",
+    "reading-time": "^1.2.0",
     "sirv": "^0.4.0"
   },
   "devDependencies": {

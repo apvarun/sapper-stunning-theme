@@ -13,6 +13,10 @@
 
 <script>
   export let post;
+
+  $: readingTime = `${Math.ceil(post.timeToRead.minutes)} minute${
+    Math.ceil(post.timeToRead.minutes) > 1 ? "(s)" : ""
+  } read`;
 </script>
 
 <style lang="scss">
@@ -23,8 +27,8 @@
 
   img {
     object-fit: cover;
-		margin: 0 auto;
-		max-width: 100%;
+    margin: 0 auto;
+    max-width: 100%;
     display: block;
     height: auto;
     height: fit-content;
@@ -33,6 +37,12 @@
     -webkit-box-shadow: 0 4px 20px rgba(150, 150, 150, 0.25);
     transition: 250ms ease-in all;
     margin-bottom: 15px;
+  }
+
+  .post-meta {
+    text-transform: uppercase;
+    opacity: 0.5;
+    letter-spacing: 2px;
   }
 
   .content {
@@ -67,6 +77,7 @@
 </svelte:head>
 
 <h1>{post.frontmatter.title}</h1>
+<p class="post-meta">{new Date(post.frontmatter.date).toDateString()} ﹒ {readingTime}</p>
 <img src={post.frontmatter.preview} alt={post.frontmatter.title} />
 
 <div class="content">
