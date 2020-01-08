@@ -1,8 +1,15 @@
 # Stunning Theme
 
+<center>
+
+![Stunning Theme Logo](/static/logo.png)
+
+</center>
+
 Starter blog theme built on top of Sapper(Svelte).
 
-__Features:__
+**Features:**
+
 - Ability to generate a Static site
 - Supports Markdown files for blog posts
 - Built-in pagination
@@ -21,6 +28,10 @@ Open up [localhost:3000](http://localhost:3000) to launch the website.
 ## Structure
 
 _[ WIP ]_
+
+## Deploy 
+
+[![Deploy With Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/apvarun/sapper-stunning-theme)
 
 ## Bugs and feedback
 
