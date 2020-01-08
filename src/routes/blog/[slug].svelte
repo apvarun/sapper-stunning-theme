@@ -20,9 +20,15 @@
 </script>
 
 <style lang="scss">
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
   h1 {
     font-weight: 600;
-    margin-top: 2rem;
+		margin-top: 2rem;
+		text-align: center;
   }
 
   img {
@@ -31,7 +37,6 @@
     max-width: 100%;
     display: block;
     height: auto;
-    height: fit-content;
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(150, 150, 150, 0.25);
     -webkit-box-shadow: 0 4px 20px rgba(150, 150, 150, 0.25);
@@ -42,7 +47,8 @@
   .post-meta {
     text-transform: uppercase;
     opacity: 0.5;
-    letter-spacing: 2px;
+		letter-spacing: 2px;
+		text-align: center;
   }
 
   .content {
@@ -76,10 +82,14 @@
   <title>{post.frontmatter.title}</title>
 </svelte:head>
 
-<h1>{post.frontmatter.title}</h1>
-<p class="post-meta">{new Date(post.frontmatter.date).toDateString()} ﹒ {readingTime}</p>
-<img src={post.frontmatter.preview} alt={post.frontmatter.title} />
+<div class="container">
+  <h1>{post.frontmatter.title}</h1>
+  <p class="post-meta">
+    {new Date(post.frontmatter.date).toDateString()} ﹒ {readingTime}
+  </p>
+  <img src={post.frontmatter.preview} alt={post.frontmatter.title} />
 
-<div class="content">
-  {@html post.contentHtml}
+  <div class="content">
+    {@html post.contentHtml}
+  </div>
 </div>
