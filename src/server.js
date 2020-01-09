@@ -3,10 +3,19 @@ import polka from 'polka';
 import compression from 'compression';
 import * as sapper from '@sapper/server';
 
+import config from "../theme.config";
+
 const { PORT, NODE_ENV } = process.env;
 const dev = NODE_ENV === 'development';
 
 polka() // You can also use Express
+  .use((req, res, next) => {
+    config;
+    // Workaround - Need to resolve as promise
+    setTimeout(() => {
+      next();
+    },1000)
+  })
   .use(
     compression({ threshold: 0 }),
     sirv('static', { dev }),
