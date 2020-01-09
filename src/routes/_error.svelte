@@ -2,14 +2,14 @@
   export let status;
   export let error;
 
-  const dev = process.env.NODE_ENV === "development";
+  const dev = process.env.NODE_ENV === 'development';
 </script>
 
 <style>
   .container {
     max-width: 800px;
-		margin: 4rem auto;
-		text-align: center;
+    margin: 4rem auto;
+    text-align: center;
   }
   h1,
   p {
@@ -23,9 +23,9 @@
   }
 
   p {
-		margin: 1em auto;
-		font-style: italic;
-		opacity: 0.5;
+    margin: 1em auto;
+    font-style: italic;
+    opacity: 0.5;
   }
 
   @media (min-width: 480px) {

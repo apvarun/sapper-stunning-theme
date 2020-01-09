@@ -7,14 +7,14 @@
 
     return {
       page,
-      ...response
+      ...response,
     };
   }
 </script>
 
 <script>
-  import Posts from "../components/Posts.svelte";
-  import Breadcrumb from "../components/Breadcrumb.svelte";
+  import Posts from '../components/Posts.svelte';
+  import Breadcrumb from '../components/Breadcrumb.svelte';
 
   export let posts;
   export let isFirst;

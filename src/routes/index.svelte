@@ -8,8 +8,8 @@
 </script>
 
 <script>
-  import Posts from "../components/Posts.svelte";
-  import Breadcrumb from "../components/Breadcrumb.svelte";
+  import Posts from '../components/Posts.svelte';
+  import Breadcrumb from '../components/Breadcrumb.svelte';
 
   export let posts;
   export let postsPerPage;
@@ -29,11 +29,11 @@
   @media (max-width: 767px) {
     .hero-section {
       padding: 5rem 0;
-		}
-		h1 {
-			font-size: 3rem;
-			line-height: 3.5rem;
-		}
+    }
+    h1 {
+      font-size: 3rem;
+      line-height: 3.5rem;
+    }
   }
 </style>
 

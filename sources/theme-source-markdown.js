@@ -1,14 +1,14 @@
-import marked from "marked";
-import fm from "front-matter";
-import readingTime from "reading-time";
-import { getFilesOfType } from "./utils";
+import marked from 'marked';
+import fm from 'front-matter';
+import readingTime from 'reading-time';
+import { getFilesOfType } from './utils';
 
-const DIR = "/content/";
+const DIR = '/content/';
 
 const transformSlug = text =>
   text
-    .replace(/[^0-9A-z ]/gi, "")
-    .replace(" ", "-")
+    .replace(/[^0-9A-z ]/gi, '')
+    .replace(' ', '-')
     .toLowerCase();
 
 const processFile = ({ path, content }) => {
@@ -41,14 +41,14 @@ const MarkdownSource = options => {
     getPostsByPage: page => ({
       posts: fileContents.slice(
         (page - 1) * postsPerPage,
-        (page - 1) * postsPerPage + postsPerPage
+        (page - 1) * postsPerPage + postsPerPage,
       ),
       isFirst: page === 1,
-      isLast: fileContents.length < (page - 1) * postsPerPage + postsPerPage
+      isLast: fileContents.length < (page - 1) * postsPerPage + postsPerPage,
     }),
     getPost: slug => fileContents.find(post => post.slug === slug),
     postCount: fileContents.length,
-    postsPerPage
+    postsPerPage,
   };
 };
 

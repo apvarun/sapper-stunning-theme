@@ -1,7 +1,7 @@
 <style lang="scss">
   footer {
     padding: 4rem 0 0 0;
-    
+
     .copyright {
       opacity: 0.5;
     }

@@ -15,7 +15,7 @@
   export let post;
 
   $: readingTime = `${Math.ceil(post.timeToRead.minutes)} minute${
-    Math.ceil(post.timeToRead.minutes) > 1 ? "(s)" : ""
+    Math.ceil(post.timeToRead.minutes) > 1 ? '(s)' : ''
   } read`;
 </script>
 
@@ -27,8 +27,8 @@
 
   h1 {
     font-weight: 600;
-		margin-top: 2rem;
-		text-align: center;
+    margin-top: 2rem;
+    text-align: center;
   }
 
   img {
@@ -47,8 +47,8 @@
   .post-meta {
     text-transform: uppercase;
     opacity: 0.5;
-		letter-spacing: 2px;
-		text-align: center;
+    letter-spacing: 2px;
+    text-align: center;
   }
 
   .content {
