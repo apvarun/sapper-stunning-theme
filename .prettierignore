@@ -1,0 +1,6 @@
+/.history/
+/coverage/
+/node_modules/
+**/node_modules/
+**/__sapper__/
+**/cypress/screenshots/
