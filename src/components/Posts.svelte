@@ -33,8 +33,6 @@
     img {
       object-fit: cover;
       width: 100%;
-      height: auto;
-      height: fit-content;
       border-radius: 10px;
       box-shadow: 0 4px 20px rgba(150, 150, 150, 0.25);
       -webkit-box-shadow: 0 4px 20px rgba(150, 150, 150, 0.25);

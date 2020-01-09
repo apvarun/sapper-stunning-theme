@@ -11,8 +11,8 @@
     "cy:run": "cypress run",
     "cy:open": "cypress open",
     "test": "run-p --race dev cy:run",
-    "prettify": "prettier --config ./.prettierrc --ignore-path ./.prettierignore --check **/*.{js,svelte,css,html}",
-    "prettify:fix": "prettier --config ./.prettierrc --ignore-path ./.prettierignore --write **/*.{js,svelte,css,html}"
+    "prettify": "prettier --config ./.prettierrc --ignore-path ./.prettierignore --check **/*.{js,svelte,html}",
+    "prettify:fix": "prettier --config ./.prettierrc --ignore-path ./.prettierignore --write **/*.{js,svelte,html}"
   },
   "dependencies": {
     "compression": "^1.7.1",
