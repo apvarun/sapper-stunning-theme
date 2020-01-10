@@ -1,15 +1,16 @@
-import config from "../../theme.config.js";
+import config from '../../theme.config.js';
 
 export async function get(req, res, next) {
-  const posts = config.source.getPosts();
+  const source = await config.source;
+  const posts = source.getPosts();
 
   if (posts !== null) {
     const response = {
-      postsPerPage: config.source.postsPerPage,
-      posts
+      postsPerPage: source.postsPerPage,
+      posts,
     };
-    
-    res.setHeader("Content-Type", "application/json");
+
+    res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify(response));
   } else {
     next();

@@ -1,25 +1,26 @@
-import config from "../../../theme.config";
+import config from '../../../theme.config';
 
-export function get(req, res, next) {
+export async function get(req, res, next) {
   const { slug } = req.params;
 
-  const post = config.source.getPost(slug);
+  const source = await config.source;
+  const post = source.getPost(slug);
 
   if (post) {
     res.writeHead(200, {
-      "Content-Type": "application/json"
+      'Content-Type': 'application/json',
     });
 
     res.end(JSON.stringify(post));
   } else {
     res.writeHead(404, {
-      "Content-Type": "application/json"
+      'Content-Type': 'application/json',
     });
 
     res.end(
       JSON.stringify({
-        message: `Not found`
-      })
+        message: `Not found`,
+      }),
     );
   }
 }
