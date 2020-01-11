@@ -81,7 +81,7 @@
         <img src={post.frontmatter.preview} alt="" />
       {/if}
       <h2>{post.frontmatter.title}</h2>
-      <div class="description">{post.frontmatter.excerpt}...</div>
+      <div class="description">{post.frontmatter.excerpt}</div>
     </a>
   {/each}
 </div>
