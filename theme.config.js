@@ -1,14 +1,12 @@
-import MarkdownSource from './sources/theme-source-markdown';
-import { initSource, gatsbySourcePolyfill } from './sources';
+import sapperSource, { gatsbyPlugin, markdownSource } from 'sapper-sources';
 
 export default {
-  source: initSource({
-    // plugin: MarkdownSource,
-    plugin: gatsbySourcePolyfill('gatsby-source-rss-feed'),
+  source: sapperSource({
+    plugin: markdownSource,
+    // plugin: gatsbyPlugin('gatsby-source-rss-feed'),
     options: {
-      postsPerPage: 4, // Default Property
-      url: `https://www.gatsbyjs.org/blog/rss.xml`,
-      name: `GatsbyBlog`,
+      postsPerPage: 4, // Used in svelte template
+      contentPath: '/contents/'
     },
   }),
 };
