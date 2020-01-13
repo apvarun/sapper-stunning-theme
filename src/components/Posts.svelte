@@ -8,23 +8,8 @@
 <style lang="scss">
   .posts {
     display: grid;
-    grid-template-columns: 2fr 1fr 2fr;
+    grid-template-columns: 1fr 1fr;
     grid-gap: 2rem;
-  }
-  .post:nth-child(4n + 1) {
-    grid-column: span 2;
-  }
-  .post:nth-child(4n + 2) {
-    grid-column: span 1;
-  }
-  .post:nth-child(4n + 3) {
-    grid-column: span 1;
-  }
-  .post:nth-child(4n + 4) {
-    grid-column: span 2;
-  }
-  .post:nth-child(odd):last-child {
-    grid-column: span 3;
   }
   .post {
     cursor: pointer;

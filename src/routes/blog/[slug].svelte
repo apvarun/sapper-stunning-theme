@@ -12,10 +12,12 @@
 </script>
 
 <script>
+  import { default as readingTimeCalculator } from 'reading-time';
   export let post;
 
-  $: readingTime = `${Math.ceil(post.timeToRead.minutes)} minute${
-    Math.ceil(post.timeToRead.minutes) > 1 ? '(s)' : ''
+  $: readingTimeData = readingTimeCalculator(post.contentHtml);
+  $: readingTime = `${Math.ceil(readingTimeData.minutes)} minute${
+    Math.ceil(readingTimeData.minutes) > 1 ? '(s)' : ''
   } read`;
 </script>
 
