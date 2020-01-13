@@ -5,7 +5,7 @@ export async function get(req, res, next) {
   const { slug } = req.params;
 
   const source = await config.source;
-  const post = formatter(source.contents).getPost(slug);
+  const post = formatter(source.contents, source.postsPerPage).getPost(slug);
 
   if (post) {
     res.writeHead(200, {

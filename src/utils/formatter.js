@@ -1,4 +1,4 @@
-const formatter = contents => ({
+const formatter = (contents, postsPerPage) => ({
   getPosts: () => contents,
   getPostsByPage: page => ({
     posts: contents.slice(

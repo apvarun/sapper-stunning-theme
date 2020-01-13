@@ -5,10 +5,10 @@ export async function get(req, res, next) {
   const { page } = req.params;
 
   const source = await config.source;
-  const response = formatter(source.contents).getPostsByPage(
-    page,
-    config.postsPerPage,
-  );
+  const response = formatter(
+    source.contents,
+    source.postsPerPage,
+  ).getPostsByPage(page, config.postsPerPage);
 
   if (response !== null) {
     res.setHeader('Content-Type', 'application/json');
